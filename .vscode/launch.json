@@ -1,0 +1,315 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task05.task0520.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(1)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task05.task0521.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(2)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1101.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(3)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1102.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(4)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1103.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(5)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1104.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(6)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1105.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(7)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1108.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(8)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1109.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(9)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1110.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(10)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1111.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(11)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1112.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(12)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1113.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(13)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1114.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(14)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1115.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(15)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1116.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(16)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1117.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(17)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1118.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(18)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1119.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(19)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1120.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(20)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task11.task1121.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(21)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1201.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(22)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1202.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(23)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1203.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(24)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1204.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(25)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1205.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(26)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1206.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(27)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1207.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(28)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1208.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(29)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1209.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(30)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1210.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(31)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1211.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(32)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1212.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(33)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1213.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(34)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1214.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(35)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1215.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(36)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1216.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(37)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1217.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(38)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1218.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(39)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1219.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(40)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1220.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Faculty",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1221.Faculty",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution(41)",
+      "request": "launch",
+      "mainClass": "com.javarush.task.pro.task12.task1222.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    }
+  ]
+}
