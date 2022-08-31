@@ -8,6 +8,20 @@
       "type": "java",
       "name": "Launch Solution",
       "request": "launch",
+      "mainClass": "com.javarush.task.pro.task13.task1303.Solution",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "JavaRushTasks_9387ecb7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
       "mainClass": "com.javarush.task.pro.task13.task1302.Solution",
       "projectName": "JavaRushTasks_9387ecb7"
     },
