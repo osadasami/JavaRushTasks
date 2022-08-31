@@ -17,3 +17,6 @@ target/
 /Instruction.png
 /out.log
 /out.log.*
+
+.vscode
+*.jrtc
