@@ -21,14 +21,11 @@ public class Solution {
       byte[] inputBytes = input.readAllBytes();
       byte[] outputBytes = new byte[inputBytes.length];
 
-      for (int i = 0; i < inputBytes.length; i++) {
-        boolean isIndexEven = i % 2 == 0;
-        try {
-          if (isIndexEven) {
-            outputBytes[i] = inputBytes[i + 1];
-            outputBytes[i + 1] = inputBytes[i];
-          }
-        } catch (ArrayIndexOutOfBoundsException e) {
+      for (int i = 0; i < inputBytes.length; i += 2) {
+        if (i < inputBytes.length - 1) {
+          outputBytes[i] = inputBytes[i + 1];
+          outputBytes[i + 1] = inputBytes[i];
+        } else {
           outputBytes[i] = inputBytes[i];
         }
       }
