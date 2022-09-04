@@ -12,7 +12,7 @@ public class Solution {
     printRation(new Wolf());
   }
 
-  public static void printRation(Animal animal) {
+  public static void printRation(Object animal) {
     String herbivore = "Любит траву";
     String predator = "Любит мясо";
 
