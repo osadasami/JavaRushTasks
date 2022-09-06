@@ -5,6 +5,8 @@ public class GameObject {
     public int y;
 
     public boolean isMine;
+
+    public int countMineNeighbors;
     GameObject(int x, int y, boolean isMine) {
         this.x = x;
         this.y = y;
