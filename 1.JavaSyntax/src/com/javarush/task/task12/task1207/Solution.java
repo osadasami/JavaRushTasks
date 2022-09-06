@@ -7,7 +7,7 @@ Int и Integer
 public class Solution {
   public static void main(String[] args) {
     print(1);
-    print(new Integer(1));
+    print(Integer.valueOf(1));
   }
 
   public static void print(int n) {
