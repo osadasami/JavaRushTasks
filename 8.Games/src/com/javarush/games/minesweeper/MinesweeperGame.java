@@ -13,6 +13,8 @@ public class MinesweeperGame extends Game {
     private static final String MINE = "\uD83D\uDCA3";
     private static final String FLAG = "\uD83D\uDEA9";
     private int countFlags;
+
+    private boolean isGameStopped;
     @Override
     public void initialize() {
         setScreenSize(SIDE, SIDE);
@@ -20,6 +22,7 @@ public class MinesweeperGame extends Game {
     }
 
     private void createGame() {
+        isGameStopped = false;
         for (int y = 0; y < SIDE; y++) {
             for (int x = 0; x < SIDE; x++) {
                 boolean isMine = getRandomNumber(10) < 1;
@@ -74,7 +77,8 @@ public class MinesweeperGame extends Game {
         object.isOpen = true;
         setCellColor(x,y, Color.GREEN);
         if (object.isMine) {
-            setCellValue(x,y,MINE);
+            setCellValueEx(x,y, Color.RED, MINE);
+            gameOver();
         } else {
             if(object.countMineNeighbors == 0) {
                 List<GameObject> neighbors = getNeighbors(object);
@@ -96,6 +100,7 @@ public class MinesweeperGame extends Game {
     }
 
     private void markTile(int x, int y) {
+        if(isGameStopped) return;
         GameObject object = gameField[y][x];
         if(object.isOpen) return;
         if(countFlags == 0 && !object.isFlag) return;
@@ -115,5 +120,10 @@ public class MinesweeperGame extends Game {
     @Override
     public void onMouseRightClick(int x, int y) {
         markTile(x,y);
+    }
+
+    private void gameOver() {
+        isGameStopped = true;
+        showMessageDialog(Color.RED, "Game Over", Color.BLACK, 18);
     }
 }
