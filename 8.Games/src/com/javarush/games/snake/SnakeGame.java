@@ -65,12 +65,20 @@ public class SnakeGame extends Game {
         if(key == Key.DOWN) {
             snake.setDirection(Direction.DOWN);
         }
+        if(key == Key.SPACE && isGameStopped) {
+            createGame();
+        }
     }
     
     private void createNewApple() {
         int x = getRandomNumber(WIDTH);
         int y = getRandomNumber(HEIGHT);
         Apple apple = new Apple(x,y);
+        while (snake.checkCollision(apple)) {
+            x = getRandomNumber(WIDTH);
+            y = getRandomNumber(HEIGHT);
+            apple = new Apple(x,y);
+        }
         this.apple = apple;
     }
 
