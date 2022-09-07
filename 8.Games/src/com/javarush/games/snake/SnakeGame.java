@@ -7,6 +7,7 @@ public class SnakeGame extends Game {
     public static final int HEIGHT = 15;
     private Snake snake;
     private Apple apple;
+    private boolean isGameStopped;
     private int turnDelay;
     @Override
     public void initialize() {
@@ -20,6 +21,7 @@ public class SnakeGame extends Game {
         Snake snake = new Snake(WIDTH/2, HEIGHT/2);
         this.snake = snake;
         createNewApple();
+        isGameStopped = false;
         drawScene();
     }
 
@@ -38,6 +40,9 @@ public class SnakeGame extends Game {
         snake.move(apple);
         if(!apple.isAlive) {
             createNewApple();
+        }
+        if(!snake.isAlive) {
+            gameOver();
         }
         drawScene();
     }
@@ -63,5 +68,11 @@ public class SnakeGame extends Game {
         int y = getRandomNumber(HEIGHT);
         Apple apple = new Apple(x,y);
         this.apple = apple;
+    }
+
+    private void gameOver() {
+        stopTurnTimer();
+        isGameStopped = true;
+        showMessageDialog(Color.RED,"Game Over", Color.BLACK,18);
     }
 }
