@@ -73,7 +73,10 @@ public class MinesweeperGame extends Game {
         }
     }
     private void openTile(int x, int y) {
+        if(isGameStopped) return;
         GameObject object = gameField[y][x];
+        if(object.isOpen) return;
+        if(object.isFlag) return;
         object.isOpen = true;
         setCellColor(x,y, Color.GREEN);
         if (object.isMine) {
