@@ -99,4 +99,7 @@ public class Snake {
     public boolean checkCollision(GameObject object) {
         return snakeParts.stream().anyMatch((GameObject part) -> part.x == object.x && part.y == object.y);
     }
+    public int getLength() {
+        return snakeParts.size();
+    }
 }
