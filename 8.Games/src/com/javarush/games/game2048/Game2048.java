@@ -89,23 +89,18 @@ public class Game2048 extends Game {
 
     private boolean compressRow(int[] row) {
         boolean isChanged = false;
-        int firstZeroValueIndex = -1;
 
         for(int i = 0; i < row.length; i++) {
-            if(row[i] == 0 && firstZeroValueIndex == -1) {
-                firstZeroValueIndex = i;
-            }
-            if(row[i] != 0 && firstZeroValueIndex != -1) {
-                row[firstZeroValueIndex] = row[i];
-                row[i] = 0;
-                for(int j = 0; j < row.length; j++) {
-                    if(row[j] == 0) {
-                        firstZeroValueIndex = j;
-                        break;
-                    }
+            for(int j = i; j < row.length; j++) {
+                if(row[i] == 0 && row[j] != 0) {
+                    row[i] = row[j];
+                    row[j] = 0;
+                    isChanged = true;
+                    break;
                 }
-                isChanged = true;
             }
+            boolean isNotZeroesExist = Arrays.stream(Arrays.copyOfRange(row, i+1, row.length)).anyMatch(n -> n != 0);
+            if(!isNotZeroesExist) return isChanged;
         }
 
         return isChanged;
@@ -124,4 +119,24 @@ public class Game2048 extends Game {
 
         return isChanged;
     }
+
+    @Override
+    public void onKeyPress(Key key) {
+        if(key == Key.UP) {
+            moveUp();
+        }
+        if(key == Key.RIGHT) {
+            moveRight();
+        }
+        if(key == Key.DOWN) {
+            moveDown();
+        }
+        if(key == Key.LEFT) {
+            moveLeft();
+        }
+    }
+    private void moveLeft() {};
+    private void moveRight() {};
+    private void moveUp() {};
+    private void moveDown() {};
 }
