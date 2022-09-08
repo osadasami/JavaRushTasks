@@ -29,14 +29,15 @@ public class Game2048 extends Game {
     }
 
     private void createNewNumber() {
-        int randomX = getRandomNumber(SIDE);
-        int randomY = getRandomNumber(SIDE);
-        int randomValue = getRandomNumber(10) == 9 ? 4 : 2;
-        while(gameField[randomY][randomX] != 0) {
-            randomX = getRandomNumber(SIDE);
-            randomY = getRandomNumber(SIDE);
-        }
-        gameField[randomY][randomX] = randomValue;
+        boolean isCreated = false;
+        do {
+            int x = getRandomNumber(SIDE);
+            int y = getRandomNumber(SIDE);
+            if (gameField[y][x] == 0) {
+                gameField[y][x] = getRandomNumber(10) < 9 ? 2 : 4;
+                isCreated = true;
+            }
+        } while (!isCreated);
     }
 
     private Color getColorByValue(int value) {
@@ -124,19 +125,40 @@ public class Game2048 extends Game {
     public void onKeyPress(Key key) {
         if(key == Key.UP) {
             moveUp();
+            drawScene();
         }
         if(key == Key.RIGHT) {
             moveRight();
+            drawScene();
         }
         if(key == Key.DOWN) {
             moveDown();
+            drawScene();
         }
         if(key == Key.LEFT) {
             moveLeft();
+            drawScene();
         }
     }
-    private void moveLeft() {};
-    private void moveRight() {};
-    private void moveUp() {};
-    private void moveDown() {};
+    private void moveLeft() {
+        boolean isNewNumberNeeded = false;
+        
+        for (int[] row : gameField) {
+            boolean isCompressed = compressRow(row);
+            boolean isMerged = mergeRow(row);
+            if(isMerged) {
+                compressRow(row);
+            }
+            if(isCompressed || isMerged) {
+                isNewNumberNeeded = true;
+            }
+        }
+
+        if (isNewNumberNeeded) {
+            createNewNumber();
+        }
+    }
+    private void moveRight() {}
+    private void moveUp() {}
+    private void moveDown() {}
 }
