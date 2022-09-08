@@ -161,4 +161,16 @@ public class Game2048 extends Game {
     private void moveRight() {}
     private void moveUp() {}
     private void moveDown() {}
+
+    private void rotateClockwise() {
+        int[][] result = new int[SIDE][SIDE];
+
+        for(int i = 0; i < SIDE; i++) {
+            for(int j = 0; j < SIDE; j++) {
+                result[j][SIDE-1-i] = gameField[i][j];
+            }
+        }
+        
+        gameField = result;
+    }
 }
