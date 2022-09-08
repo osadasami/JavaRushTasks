@@ -89,18 +89,23 @@ public class Game2048 extends Game {
 
     private boolean compressRow(int[] row) {
         boolean isChanged = false;
+        int firstZeroValueIndex = -1;
 
         for(int i = 0; i < row.length; i++) {
-            for(int j = i; j < row.length; j++) {
-                if(row[i] == 0 && row[j] != 0) {
-                    row[i] = row[j];
-                    row[j] = 0;
-                    isChanged = true;
-                    break;
-                }
+            if(row[i] == 0 && firstZeroValueIndex == -1) {
+                firstZeroValueIndex = i;
             }
-            boolean isNotZeroesExist = Arrays.stream(Arrays.copyOfRange(row, i+1, row.length)).anyMatch(n -> n != 0);
-            if(!isNotZeroesExist) return isChanged;
+            if(row[i] != 0 && firstZeroValueIndex != -1) {
+                row[firstZeroValueIndex] = row[i];
+                row[i] = 0;
+                for(int j = 0; j < row.length; j++) {
+                    if(row[j] == 0) {
+                        firstZeroValueIndex = j;
+                        break;
+                    }
+                }
+                isChanged = true;
+            }
         }
 
         return isChanged;
