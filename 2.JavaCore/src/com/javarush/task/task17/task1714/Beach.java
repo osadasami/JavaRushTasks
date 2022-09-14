@@ -1,0 +1,88 @@
+package com.javarush.task.task17.task1714;
+
+/* 
+Comparable
+*/
+
+public class Beach implements Comparable<Beach> {
+  private String name; // название
+  private float distance; // расстояние
+  private int quality; // качество
+
+  public Beach(String name, float distance, int quality) {
+    this.name = name;
+    this.distance = distance;
+    this.quality = quality;
+  }
+
+  public synchronized String getName() {
+    return name;
+  }
+
+  public synchronized void setName(String name) {
+    this.name = name;
+  }
+
+  public synchronized float getDistance() {
+    return distance;
+  }
+
+  public synchronized void setDistance(float distance) {
+    this.distance = distance;
+  }
+
+  public synchronized int getQuality() {
+    return quality;
+  }
+
+  public synchronized void setQuality(int quality) {
+    this.quality = quality;
+  }
+
+  @Override
+  public synchronized int compareTo(Beach o) {
+    Beach distanceWinner;
+    Beach qualityWinner;
+
+    if (this.distance < o.distance) {
+      distanceWinner = this;
+    } else if (this.distance > o.distance) {
+      distanceWinner = o;
+    } else {
+      distanceWinner = null;
+    }
+
+    if (this.quality > o.quality) {
+      qualityWinner = this;
+    } else if (this.quality < o.quality) {
+      qualityWinner = o;
+    } else {
+      qualityWinner = null;
+    }
+
+    if (distanceWinner == this && qualityWinner == this) {
+      return 1;
+    }
+    if (distanceWinner == this && qualityWinner == null) {
+      return 1;
+    }
+    if (distanceWinner == null && qualityWinner == this) {
+      return 1;
+    }
+
+    if (distanceWinner == o && qualityWinner == o) {
+      return -1;
+    }
+    if (distanceWinner == o && qualityWinner == null) {
+      return -1;
+    }
+    if (distanceWinner == null && qualityWinner == o) {
+      return -1;
+    }
+
+    return 0;
+  }
+
+  public static void main(String[] args) {
+  }
+}
