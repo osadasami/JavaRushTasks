@@ -17,7 +17,8 @@ public class Solution {
   }
 
   public static void main(String[] args) {
-
+    System.out.println(
+        String.format("%2$2s %1$s", "1", "2"));
   }
 
   public static class IncomeDataAdapter implements Customer, Contact {
